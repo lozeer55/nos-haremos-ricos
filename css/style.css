@@ -1,0 +1,256 @@
+body {
+    padding: 0px;
+    margin: 0%;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------ */
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+.container {
+    margin-top: 100px;
+}
+
+.row {
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.col-sm-4{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow: auto;
+   
+}
+
+p{
+    text-align: center;
+    color: #fff;  
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.imgcard{
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.cuadro {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 50vh;
+    width: 40vh;
+    background: linear-gradient(
+        45deg, #D93231ff 25%,  #393939 25%,  #393939 50%, 
+        #D93231ff 50%, #D93231ff 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+    filter: grayscale(1);
+     animation: animationBg 0.5s linear infinite;
+     animation-play-state: paused;
+     transition: filter 0.8s;
+     box-shadow: 8px 15px rgba(0, 0, 0, 0.329);
+}
+
+ .cuadro2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 50vh;
+    width: 40vh;
+    background: linear-gradient(
+        135deg, #8DA857 25%,  #393939 25%,  #393939 50%, 
+        #8DA857 50%,#8DA857 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+     filter: grayscale(1);
+     animation: animationBg 0.5s linear infinite;
+     animation-play-state: paused;
+     transition: filter 0.8s;
+     box-shadow: 8px 15px rgba(0, 0, 0, 0.329);
+    }
+
+.cuadro3 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 50vh;
+    width: 40vh;
+    background: linear-gradient(
+        225deg, #F9B317 25%,  #393939 25%,  #393939 50%, 
+        #F9B317 50%,#F9B317 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+     filter: grayscale(1);
+     animation: animationBg 0.5s linear infinite;
+     animation-play-state: paused;
+     transition: filter 0.5s;
+     box-shadow: 8px 15px rgba(0, 0, 0, 0.329);
+}
+
+.cuadro:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+
+
+.cuadro2:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+.cuadro3:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+
+
+.contenedor .cuadro img{ 
+    position:absolute;
+    bottom: 0;
+    height:40vh;
+    bottom: 0;
+    transition: height 0.3s;
+        
+}
+
+
+.contenedor .cuadro2 img{ 
+    position:absolute;
+    bottom: 0;
+    height:40vh;
+    bottom: 0;
+    transition: height 0.3s;
+        
+}
+
+
+.contenedor .cuadro3 img{ 
+    position:absolute;
+    bottom: 0;
+    height:40vh;
+    bottom: 0;
+    transition: height 0.3s;
+        
+}
+
+
+
+
+
+.contenedor .cuadro:hover img{ 
+    height: 50vh;    
+}
+
+.contenedor .cuadro2:hover img{ 
+    height: 50vh;    
+}
+
+.contenedor .cuadro3:hover img{ 
+    height: 50vh;    
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes animationBg {
+    
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40px;
+    }
+}
